@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  background-color: orange;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px 0px;
+}
+header .logo{
+  font-size: 16px;
+  background-color: black;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: white;
+  margin: 10px;
+
+}
+header ul{
+  display: flex;
+  list-style: none;
+}
+
+
+header ul li a{
+  text-decoration: none;
+  display: block;
+  margin: 10px;
+  padding: 5px 0px;
+}
+
+footer{
+  background-color: lightseagreen;
+  padding: 30px;
+  height: 25vh;
+}
+.hero{
+  background-color: rgb(236, 241, 248);
+  position: relative;
+}
+.hero img{
+  width: 100%;
+  height:400px;
+  object-fit: cover;
+
+}
+.hero h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
 }
+.card{
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.card img{
+  height: 185px;
+  width: 275px;
+  border-radius: 8px;
+  object-fit: cover;
 
-.App-link {
-  color: #61dafb;
+}
+.cards{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 942px;
+}
+.app h2{
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 942px;
+}
+.card p{
+  width: 275px;
+  margin-top: 15px;
+  color: #323739;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card h3{
+  margin-top: 15px;
+}
+@media (max-width: 730px) {
+  .cards {
+    flex-direction: column;
+    margin: auto;
+    padding: auto;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  .app h2{
+    text-align: center;
   }
 }
+.card button{
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.card button:hover{
+  background-color: orange;
+}
+
+.cards .active button{
+  background-color: rgb(122 53 143);
+}
+.card .heart{
+  height: 20px;
+  width: auto;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  /* display: none; */
+  transform: translateY(-170%);
+  translate: all ease 0.5s;
+  opacity: 0;
+}
+.cards .active .heart{
+  /* display: block; */
+  transform: translateY(0%);
+  opacity: 1;
+}
+
